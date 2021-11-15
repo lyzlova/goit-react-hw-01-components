@@ -1,0 +1,21 @@
+.statistics {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ECEFF1;
+}
+.content {
+    max-width: 300px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.statList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

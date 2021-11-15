@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import s from './Profile.module.css';
 
 const Profile = ({
     name,
@@ -8,32 +9,36 @@ const Profile = ({
     stats,
     }) => {
     return (
-        <div className="profile">
-            <div className="description">
-                <img
-                    src={avatar}
-                    alt="Аватар пользователя"
-                    className="avatar"
-                />
-                <p className="name">{name}</p>
-                <p className="tag">{tag}</p>
-                <p className="location">{location}</p>
-            </div>
+        <div className={s.profile}>
+            <div className={s.content}>
+                <div className={s.description}>
+                    <img
+                        src={avatar}
+                        alt="Аватар пользователя"
+                        className={s.avatar}
+                    />
+                    <div>
+                        <p className={s.name}>{name}</p>
+                        <p className={s.tag}>{tag}</p>
+                        <p className={s.location}>{location}</p>
+                    </div>
+                </div>
 
-            <ul className="stats">
-                <li>
-                    <span className="label">Followers</span>
-                    <span className="quantity">{stats.followers}</span>
-                </li>
-                <li>
-                    <span className="label">Views</span>
-                    <span className="quantity">{stats.views}</span>
-                </li>
-                <li>
-                    <span className="label">Likes</span>
-                    <span className="quantity">{stats.likes}</span>
-                </li>
-            </ul>
+                <ul className={s.stats}>
+                    <li className={s.profileItem}>
+                        <span className={s.label}>Followers</span>
+                        <span className={s.quantity}>{stats.followers}</span>
+                    </li>
+                    <li className={s.profileItem}>
+                        <span className={s.label}>Views</span>
+                        <span className={s.quantity}>{stats.views}</span>
+                    </li>
+                    <li className={s.profileItem}>
+                        <span className={s.label}>Likes</span>
+                        <span className={s.quantity}>{stats.likes}</span>
+                    </li>
+                </ul>
+            </div>
         </div>
     )
 }
